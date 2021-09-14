@@ -471,6 +471,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var stim
 
 /***/ }),
 
+/***/ "./src/controllers/content_loader_controller.js":
+/*!******************************************************!*\
+  !*** ./src/controllers/content_loader_controller.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var stimulus__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! stimulus */ \"./node_modules/stimulus/index.js\");\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class extends stimulus__WEBPACK_IMPORTED_MODULE_0__.Controller {\n  static values = { url: String }\n\n  connect() {\n    this.load()\n  }\n\n  load() {\n    fetch(this.urlValue)\n      .then(response => response.text())\n      .then(html => this.element.innerHTML = html)\n  }\n});\n\n\n//# sourceURL=webpack://stimulus-webpack/./src/controllers/content_loader_controller.js?");
+
+/***/ }),
+
 /***/ "./src/controllers/example_controller.js":
 /*!***********************************************!*\
   !*** ./src/controllers/example_controller.js ***!
@@ -488,7 +499,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var map = {\n\t\"./example_controller.js\": \"./src/controllers/example_controller.js\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/controllers sync recursive \\\\.js$\";\n\n//# sourceURL=webpack://stimulus-webpack/./src/controllers/_sync_\\.js$?");
+eval("var map = {\n\t\"./content_loader_controller.js\": \"./src/controllers/content_loader_controller.js\",\n\t\"./example_controller.js\": \"./src/controllers/example_controller.js\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/controllers sync recursive \\\\.js$\";\n\n//# sourceURL=webpack://stimulus-webpack/./src/controllers/_sync_\\.js$?");
 
 /***/ })
 
